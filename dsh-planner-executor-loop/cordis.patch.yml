@@ -1,0 +1,8 @@
+# dsh-planner-executor-loop bundle patch (mount-only).
+#
+# 不改动任何 @deepseek-ai harness 内部条目，只把本插件自身插入 profile 层栈。
+# 所有可调项（planner / executor 路由、maxRounds）都在该行 config 上配置，
+# 可在 profile 自己的 cordis.patch.yml 里按行 id `planner-executor-loop` 覆写。
+- insert:
+    - id: planner-executor-loop
+      name: dsh-planner-executor-loop
